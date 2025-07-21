@@ -5,7 +5,7 @@ bool Prime(int x) {
     if (x < 2) {
         return false;
     }
-    for (int i = 2; i * i <= x; ++i) {
+    for (int i = 2; i * i <= x; i++) {
         if (x % i == 0) {
             return false;
         }
@@ -27,7 +27,7 @@ bool Palindrome(int x) {
 }
 int countDivisors(int x) {
     int count = 0;
-    for (int i = 1; i <= x; ++i) {
+    for (int i = 1; i <= x; i++) {
         if (x % i == 0) {
             count++;
         }
@@ -36,7 +36,7 @@ int countDivisors(int x) {
 }
 int Max(int arr[], int n) {
     int maxval = arr[0];
-    for (int i = 1; i < n; ++i) {
+    for (int i = 1; i < n; i++) {
         if (arr[i] > maxval) {
             maxval = arr[i];
         }
@@ -45,7 +45,7 @@ int Max(int arr[], int n) {
 }
 int Min(int arr[], int n) {
     int minval = arr[0];
-    for (int i = 1; i < n; ++i) {
+    for (int i = 1; i < n; i++) {
         if (arr[i] < minval) {
             minval = arr[i];
         }
@@ -56,7 +56,7 @@ int main() {
     int n;
     cin >> n;
     int arr[100];
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n; i++) {
         cin >> arr[i];
     }
     int primeCount = 0;
@@ -64,7 +64,7 @@ int main() {
     int maxDivisors = 0;
     int numberWithMaxDivisors = 0;
 
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n; i++) {
         if (Prime(arr[i])) {
             primeCount++;
         }
